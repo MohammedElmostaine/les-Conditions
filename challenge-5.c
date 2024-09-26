@@ -20,9 +20,9 @@ int main () {
 
     printf("Entrez un nombre d' annees que vous souhaitez convertir : \n");
     scanf("%d", &annee1);
-    if ( annee1 < 0){
-        printf("ENTREZ UN NOMBRE POSITIF!!");
-
+    while ( annee1 < 0 ) {
+        printf("ENTREZ UN NOMBRE POSITIF!!\n");
+        scanf("%d", &annee1);
     }
     
     printf("Choisissez une option de conversion :\n");
@@ -32,6 +32,11 @@ int main () {
     printf("[4]/ convertir en minutes \n");
     printf("[5]/ convertir en secondes \n");
     scanf("%d", &menu);
+
+    while (menu <= 0  || menu >= 6 ) {
+        printf("ENTREZ UN NOMBRE ENTRE 1 ET 5 !! \n");
+        scanf("%d", &menu);
+    }
 
     
     switch (menu) {
@@ -60,9 +65,7 @@ int main () {
         annee2 =  annee1 * 60 * 60 * 24 * 365;
         printf("%d secondes\n", annee2);
             break;
-        default :
-        printf("ENTREZ UN NOMBRE ENTRE 1 ET 5 !! \n");
-            break;
+        
 
     }
     return 0;
