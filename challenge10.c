@@ -10,10 +10,10 @@ int main() {
     while ( (mois <= 0 || mois > 12) || (jour <= 0 || jour > 31) || annee <= 0 )
     {
     
-    if ( mois <= 0 || mois > 12){
-        printf("ENTRER un nombre entre 1 et 12 pour les mois\n");
-    } else if (jour <= 0 || jour > 31){
+    if (jour <= 0 || jour > 31){
         printf("Entrez un nombre entre 1 et 30 pour les jour\n");
+    } else if ( mois <= 0 || mois > 12){
+        printf("ENTRER un nombre entre 1 et 12 pour les mois\n");
     } else if ( annee <= 0 ){
         printf("ENTRER un nombre positife pour les annees\n");
     } 
